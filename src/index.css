@@ -7,8 +7,10 @@ body {
   background-color: rgb(34, 30, 30);
 }
 
-.board {
-  margin-top: 100px;
+.status {
+  margin: 10px 0px;
+  color: azure;
+  text-align: center;
 }
 
 .square {
