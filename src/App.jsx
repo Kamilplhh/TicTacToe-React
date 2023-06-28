@@ -70,12 +70,11 @@ export default function Board() {
     status = "Draw";
   }
   else {
-    status = "Next player: " + (xIsNext ? "X" : "O");
+    status = "Move: " + (move) + "\n Next player: " + (xIsNext ? "X" : "O");
   }
 
   return (
     <>
-
       <div className="board">
         <div className="row">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} />

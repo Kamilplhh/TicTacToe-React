@@ -17,6 +17,7 @@ body {
   margin-top: 10px;
   color: azure;
   text-align: center;
+  white-space: pre-line;
 }
 
 .square {
