@@ -13,6 +13,7 @@ export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [hide, setHide] = useState(true);
+  const [move, setMove] = useState(0);
 
   function ChangePlayer() {
     setXIsNext(!xIsNext);
@@ -22,6 +23,7 @@ export default function Board() {
     setSquares(Array(9).fill(null))
     setXIsNext(!xIsNext);
     setHide(true);
+    setMove(0);
   }
 
   function handleClick(i) {
@@ -36,6 +38,7 @@ export default function Board() {
     }
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
+    setMove(move +1);
     setHide(false);
   }
 
@@ -63,7 +66,10 @@ export default function Board() {
   let status;
   if (winner) {
     status = "Winner: " + winner;
-  } else {
+  } else if (move === 9) {
+    status = "Draw";
+  }
+  else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
