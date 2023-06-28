@@ -1,4 +1,5 @@
 body {
+  margin-top: 30px !important;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -8,7 +9,7 @@ body {
 }
 
 .status {
-  margin: 10px 0px;
+  margin-top: 10px;
   color: azure;
   text-align: center;
 }
@@ -23,6 +24,22 @@ body {
 }
 
 .square:hover {
+  background-color: rgb(245, 222, 179);
+  cursor: pointer;
+}
+
+.button {
+  padding: 2px;
+  transition: .3s;
+  margin-top: 5px;
+  margin-left: 20%;
+  width: 60%;
+  border-radius: 20px;
+  border: 1px solid rgb(245, 222, 179);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.button:hover {
   background-color: rgb(245, 222, 179);
   cursor: pointer;
 }
