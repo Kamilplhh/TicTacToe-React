@@ -8,6 +8,11 @@ body {
   background-color: rgb(34, 30, 30);
 }
 
+.board {
+  border: 3px solid rgb(245, 222, 179);
+  border-radius: 4px;
+}
+
 .status {
   margin-top: 10px;
   color: azure;

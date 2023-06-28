@@ -14,8 +14,14 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [hide, setHide] = useState(true);
 
-  function onChangePlayerClick() {
+  function ChangePlayer() {
     setXIsNext(!xIsNext);
+  }
+
+  function RestartGame() {
+    setSquares(Array(9).fill(null))
+    setXIsNext(!xIsNext);
+    setHide(true);
   }
 
   function handleClick(i) {
@@ -63,7 +69,7 @@ export default function Board() {
 
   return (
     <>
-      
+
       <div className="board">
         <div className="row">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -83,7 +89,10 @@ export default function Board() {
       </div>
       <div className="status">{status}</div>
       {hide &&
-        <button className="button" onClick={() => onChangePlayerClick()}>ChangePlayer</button>
+        <button className="button" onClick={() => ChangePlayer()}>ChangePlayer</button>
+      }
+      {!hide &&
+        <button className="button" onClick={() => RestartGame()}>Restart Game</button>
       }
     </>
   );
